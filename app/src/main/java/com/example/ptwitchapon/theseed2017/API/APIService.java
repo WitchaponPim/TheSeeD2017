@@ -18,4 +18,8 @@ public interface APIService {
     @FormUrlEncoded
     @POST("login.php")
     Call<List<User>> postUser(@Field("username") String user, @Field("password") String pass);
+    @FormUrlEncoded
+    @POST("timeLog.php")
+    Call postTime(@Field("user") String user,@Field("time") String time);
+
 }

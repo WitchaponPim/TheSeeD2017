@@ -56,4 +56,18 @@ public class NetworkConnectionManager {
         });
 
     }
+    public void postTime(String user,String time){
+        Call call = con.postTime(user,time);
+        call.enqueue(new Callback() {
+            @Override
+            public void onResponse(Response response, Retrofit retrofit) {
+
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+
+            }
+        });
+    }
 }
